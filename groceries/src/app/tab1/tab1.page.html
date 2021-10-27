@@ -5,11 +5,11 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" padding>
-  <h3 text-center *ngIf="loadItems().length === 0">
+  <h3 text-center *ngIf="items.length === 0">
     No Items Available on the list
   </h3>
   <ion-list>
-    <ion-item-sliding *ngFor="let item of loadItems(); let i = index">
+    <ion-item-sliding *ngFor="let item of items; let i = index">
       <ion-item>
         <ion-label
           >{{item.name}} <br />

@@ -42,12 +42,14 @@ export class InputDialogService {
           }
         }, {
           text: item ? 'Save Changes' : 'Add Item',
-          handler: item => {
-            console.log('Confirm Ok', item);
+          handler: data => {
+            console.log('Confirm Ok', data);
             if (index !== undefined) {
+              item.name = data.name;
+              item.quantity = data.quantity;
               this.dataService.editItem(item, index);
             } else {
-              this.dataService.addItem(item)
+              this.dataService.addItem(data)
             }
           }
         }
