@@ -11,7 +11,7 @@ export class GroceriesServiceService {
   items: any = [];
   dataChanged$: Observable<boolean>;
   private dataChangeSubject: Subject<boolean>;
-  baseUrl = "http://localhost:8080";
+  baseUrl = "https://groceries-server-demo-mj";
 
   constructor(public http: HttpClient) {
     this.dataChangeSubject = new Subject<boolean>();
